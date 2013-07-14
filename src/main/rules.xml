@@ -9,4 +9,5 @@
 <rule><event>Update</event><condition>blah something 1000</condition><action>blah</action></rule>
 <rule><event>Eat</event><condition>median &lt; 10</condition><action>No</action></rule>
 <rule><event>Delete</event><condition>mode &gt; 0</condition><action>nooooooooooooooo</action></rule>
+<rule><event>Delete</event><condition>deviation &lt; 10</condition><action>Winner.</action></rule>
 </rules>
