@@ -19,4 +19,15 @@ public class SimpleRuleBase implements RuleBase {
 		}
 	}
 
+	@Override
+	public List<ECARule> getRulesForEvent(ECAEvent event) {
+		List<ECARule> result = new ArrayList<>();
+		for (ECARule rule: rules) {
+			if (rule.getEvent().equals(event.getDescription())) {
+				result.add(rule);
+			}
+		}
+		return result;
+	}
+
 }
