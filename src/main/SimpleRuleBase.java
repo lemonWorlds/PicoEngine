@@ -12,11 +12,14 @@ public class SimpleRuleBase implements RuleBase {
 	}
 	
 	public void printRules() {
+		System.out.println("****************************");
+		System.out.println("Here are the loaded rules:");
 		for (ECARule rule: rules) {
 			System.out.println("Event: " + rule.getEvent());
 			System.out.println("Condition: " + rule.getCondition());
 			System.out.println("Action: " + rule.getAction());
 		}
+		System.out.println("******************************");
 	}
 
 	@Override

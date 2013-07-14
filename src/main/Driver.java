@@ -1,5 +1,7 @@
 package main;
 
+import interfaces.EventHandler;
+
 public class Driver {
 
 	/**
@@ -10,6 +12,16 @@ public class Driver {
 		RuleBase base = new SimpleRuleBase();
 		parser.getRules(base);
 		base.printRules();
+		ECAEvent event1 = new SimpleECAEvent("Update");
+		ECAEvent event2 = new SimpleECAEvent("Delete");
+		ECAEvent event3 = new SimpleECAEvent("Update");
+		ECAEvent event4 = new SimpleECAEvent("Create");
+		ConditionEvaluator eval = new ConditionEvaluator();
+		EventHandler handler = new SimpleECAEventHandler(base, eval);
+		handler.handle(event1);
+		handler.handle(event2);
+		handler.handle(event3);
+		handler.handle(event4);
 	}
 
 }

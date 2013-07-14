@@ -1,4 +1,4 @@
 PicoEngine
 ==========
 
-A very simple rule engine.Test.
+A very simple rule engine.

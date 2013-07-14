@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <rules>
 <rule>
-<event>Update Document</event>
+<event>Create</event>
 <condition>reader > 15</condition><action>Explode!</action>
-</rule><rule><event>Eat Food</event><condition>Fridge Empty</condition><action>Buy more food!</action>
+</rule><rule><event>Update</event><condition>Fridge Empty</condition><action>Buy more food!</action>
 </rule>
-<rule><event>Go to shops...</event><condition>Nice stuff available</condition><action>Purchase it.</action></rule>
+<rule><event>Delete</event><condition>Nice stuff available</condition><action>Purchase it.</action></rule>
+<rule><event>Update</event><condition>Awesome</condition><action>blah</action></rule>
+<rule><event>Eat</event><condition>HEllo</condition><action>No</action></rule>
+<rule><event>Delete</event><condition>Good</condition><action>nooooooooooooooo</action></rule>
 </rules>
