@@ -1,5 +1,6 @@
 package main;
 
+import interfaces.ActionScheduler;
 import interfaces.EventHandler;
 
 public class Driver {
@@ -16,7 +17,9 @@ public class Driver {
 		ECAEvent event2 = new SimpleECAEvent("Delete");
 		ECAEvent event3 = new SimpleECAEvent("Update");
 		ECAEvent event4 = new SimpleECAEvent("Create");
-		ConditionEvaluator eval = new ConditionEvaluator();
+		DataSet data = new DataSet(3,6,12,99);
+		ActionScheduler scheduler = new SimpleActionScheduler();
+		ConditionEvaluator eval = new ConditionEvaluator(data,scheduler);
 		EventHandler handler = new SimpleECAEventHandler(base, eval);
 		handler.handle(event1);
 		handler.handle(event2);
